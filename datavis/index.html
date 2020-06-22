@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="" />
+        <meta name="description" content="COVID19 SE" />
+        <title>COVID19 - Software Engineering Study</title>
+
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="notebook/inspector.css">
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/my-css.css" rel="stylesheet" />
+        <script src="js/lda-models.js"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: 190px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#graphs">Datavis</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#topics">Topics</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#urls">URLs</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">COVID19 <span class="text-primary">Software Engineering</span></h1>
+                    <div class="subheading mb-5">Pedro Almir Oliveira, Pedro Santos Neto, Gleison Silva, Irvayne Ibiapina,
+                        Werney Luz, Rossana M. C. Andrade</div>
+                    <p class="lead mb-5">This work analyzed eHealth discussions from Stack Overflow (SO) to identify trends and demands based on the developers' perspective. Using the KDD (Knowledge Discovery in Databases) process, we got eHealth questions from the SO database. Then, we processed the data to apply the LDA (Latent Dirichlet Allocation) topic modeling algorithm. We identified 1,076 discussions and 19 meaningful topics. The most discussed topics include the manipulation of medical images, the electronic health record with the HL7 (Health Level 7) standard, and the use of frameworks to support mobile health (mHealth) development. Concerning the demands, we highlight the lack of understanding about the DICOM (Digital Imaging and Communications in Medicine) and HL7 structures, the absence of data repositories for testing, and the monitoring of health data in the background for mobile and wearable devices. We concluded that the number of discussions has grown mainly on mHealth, but that there are still opportunities to improve the techniques and processes of this area.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Graphs-->
+            <section class="resume-section" id="graphs">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Datavis</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Distribution by Status</h3>
+                            <!-- <div class="subheading mb-3">Intelitec Solutions</div> -->
+                            <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
+                            <img src="report/fig1_painel1.png">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Distribution of Questions per Week</h3>
+                            <!-- <div class="subheading mb-3">Intelitec Solutions</div> -->
+                            <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
+                            <img src="report/fig2_painel2.png" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Topics-->
+            <section class="resume-section pb-0" id="topics">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Topic Modeling</h2>
+                    <h3 class="mb-0">Topics considering Stack Overflow data</h3>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
+                    <div id="so_topic_container" class="d-flex flex-column flex-md-row justify-content-between" style="width: 90%;">
+                        <div id="ldavis_el127140123553488232566432981"></div>
+                        <script type="text/javascript">
+                            function LDAvis_load_lib(url, callback){
+                                var s = document.createElement('script');
+                                s.src = url;
+                                s.async = true;
+                                s.onreadystatechange = s.onload = callback;
+                                s.onerror = function(){console.warn("failed to load library " + url);};
+                                document.getElementsByTagName("head")[0].appendChild(s);
+                            }
+
+                            if(typeof(LDAvis) !== "undefined"){
+                                // already loaded: just create the visualization
+                                !function(LDAvis){
+                                    new LDAvis("#" + "ldavis_el127140123553488232566432981", ldavis_el127140123553488232566432981_data, $('#so_topic_container').width());
+                                }(LDAvis);
+                            }else{
+                                // require.js not available: dynamically load d3 & LDAvis
+                                LDAvis_load_lib("https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js", function(){
+                                    LDAvis_load_lib("js/ldavis.v1.0.0.js", function(){
+                                            new LDAvis("#" + "ldavis_el127140123553488232566432981", ldavis_el127140123553488232566432981_data, $('#so_topic_container').width());
+                                        })
+                                    });
+                            }
+                        </script>
+                    </div>
+                    <h3 class="mb-0">Topics considering Github data</h3>
+                    <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
+                    <div id="git_topic_container" class="d-flex flex-column flex-md-row justify-content-between" style="width: 90%;">
+                        <div id="ldavis_el1231402936947005441324151833"></div>
+                        <script type="text/javascript">
+                            function LDAvis_load_lib(url, callback){
+                                var s = document.createElement('script');
+                                s.src = url;
+                                s.async = true;
+                                s.onreadystatechange = s.onload = callback;
+                                s.onerror = function(){console.warn("failed to load library " + url);};
+                                document.getElementsByTagName("head")[0].appendChild(s);
+                            }
+
+                            if(typeof(LDAvis) !== "undefined"){
+                                // already loaded: just create the visualization
+                                !function(LDAvis){
+                                    new LDAvis("#" + "ldavis_el1231402936947005441324151833", ldavis_el1231402936947005441324151833_data, $('#git_topic_container').width());
+                                }(LDAvis);
+                            }else{
+                                // require.js not available: dynamically load d3 & LDAvis
+                                LDAvis_load_lib("https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js", function(){
+                                    LDAvis_load_lib("js/ldavis.v1.0.0.js", function(){
+                                            new LDAvis("#" + "ldavis_el1231402936947005441324151833", ldavis_el1231402936947005441324151833_data, $('#git_topic_container').width());
+                                        })
+                                    });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- URLS-->
+            <section class="resume-section" id="urls">
+                <div class="resume-section-content">
+                    <h2 id="urlsLabelID" class="mb-0">URLs Related with COVID-19</h2>
+                    <div class="subheading mb-3">We classified them in: Application, Data repository, Code repository, and Other</div>
+                    <div id="treeContainer"></div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Contact-->
+            <section class="resume-section" id="contact">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Contact</h2>
+                </div>
+            </section>
+            <script type="module">
+                // Load the Observable runtime and inspector.
+                import {Runtime, Library, Inspector} from "./notebook/runtime.js";
+            
+                // Your notebook, compiled as an ES module.
+                import notebook from "./notebook/5d6dd9906d17e745@603.js";
+      
+                // Load the notebook, observing its cells with a default Inspector
+                // that simply renders the value of each cell into the provided DOM node.
+                var modules = ['tooltip', 'showTooltip', 'hideTooltip', 'scrapModel']
+                new Runtime().module(notebook, name => {
+                  if(modules.includes(name)) {
+                    return {
+                      pending() {},
+                      fulfilled(value) { 
+                        console.log("Done " + name + "!")
+                      }
+                    };
+                  }
+                });
+              </script>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
