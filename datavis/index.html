@@ -41,10 +41,10 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">COVID19 <span class="text-primary">Software Engineering</span></h1>
-                    <div class="subheading mb-5">Pedro Almir Oliveira, Pedro Santos Neto, Gleison Silva, Irvayne Ibiapina,
-                        Werney Luz, Rossana M. C. Andrade</div>
-                    <p class="lead mb-5">This work analyzed eHealth discussions from Stack Overflow (SO) to identify trends and demands based on the developers' perspective. Using the KDD (Knowledge Discovery in Databases) process, we got eHealth questions from the SO database. Then, we processed the data to apply the LDA (Latent Dirichlet Allocation) topic modeling algorithm. We identified 1,076 discussions and 19 meaningful topics. The most discussed topics include the manipulation of medical images, the electronic health record with the HL7 (Health Level 7) standard, and the use of frameworks to support mobile health (mHealth) development. Concerning the demands, we highlight the lack of understanding about the DICOM (Digital Imaging and Communications in Medicine) and HL7 structures, the absence of data repositories for testing, and the monitoring of health data in the background for mobile and wearable devices. We concluded that the number of discussions has grown mainly on mHealth, but that there are still opportunities to improve the techniques and processes of this area.</p>
+                    <h2 class="mb-0"><span class="text-primary">Software Development During COVID-19 Pandemic</span></h2>
+                    <h3 class="mb-0">An Analysis of Stack Overflow and GitHub</h3>
+                    <div class="subheading mb-5">Pedro Almir Oliveira, Pedro Santos Neto, Gleison Silva, Irvayne Ibiapina, Werney Luz, Rossana M. C. Andrade</div>
+                    <p class="lead mb-5">The new coronavirus became a severe health issue for the world. This situation has motivated studies of different areas to combat this pandemic. In computer science, we point out data visualization projects to follow the disease evolution, machine learning to estimate the pandemic behavior, computer vision processing radiologic images for early detection of the disease, among others. Most of these projects are stored in version control systems, and there are discussions about them in Question & Answer websites. In this work, we conducted a Mining Software Repository to analyze the data of a large number of questions and projects aiming to find trends that could help software development researchers and practitioners to fight the coronavirus. We analyzed 1,190 questions from Stack Overflow and Data Science Q&A and 60,352 GitHub projects. We identified a correlation between the questions and projects throughout the pandemic. The main questions about coronavirus are how-to, related to web scraping and data visualization, using Python, JavaScript, and R. The most recurrent GitHub projects are machine learning projects, using JavaScript, Python, and Java. We realized that many people, including a large number of beginners, are trying to contribute in a someway to tackle the problem. In recent weeks, the number of new projects and questions is decreasing, showing that we are going to stabilize. Finally, we also present a website with our findings, facilitating analysis of everything that has been done, and serving as a support for new solutions that will help in the fight against coronavirus.</p>
                 </div>
             </section>
             <hr class="m-0" />
@@ -54,18 +54,58 @@
                     <h2 class="mb-5">Datavis</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Distribution by Status</h3>
-                            <!-- <div class="subheading mb-3">Intelitec Solutions</div> -->
-                            <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
+                            <h3 class="mb-4">Distribution by Status</h3>
+                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. </p> -->
                             <img src="report/fig1_painel1.png">
                         </div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Distribution of Questions per Week</h3>
-                            <!-- <div class="subheading mb-3">Intelitec Solutions</div> -->
-                            <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
-                            <img src="report/fig2_painel2.png" style="width: 100%;">
+                            <h3 class="mb-4">Distribution of Questions and Projects Related to the COVID-19</h3>
+                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. </p> -->
+                            <img src="report/fig_result1.png">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-4">Number of Questions</h3>
+                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. </p> -->
+                            <img src="report/fig_result2.png">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Bubble chart</h3>
+                            <!--  <p>Presenting the number of Stack Overflow Questions correlated with three dimensions: Question Type, Related Solution and Platform</p> -->
+                            <img src="report/fig_result4.png" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-4">Most recurrent programming languages</h3>
+                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. </p> -->
+                            <img src="report/fig_result3_v2.png">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-4">Most discussed topics</h3>
+                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. </p> -->
+                            <img src="report/fig_result5_v2.png">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Scatter plots</h3>
+                            <p>Correlating A) number of forks and pull requests, and B) number of forks and disk usage</p>
+                            <img src="report/fig_result6.png">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-10">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-4">Correlation between collaborators and commits</h3>
+                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. </p> -->
+                            <img src="report/fig_result8.png">
                         </div>
                     </div>
                 </div>
@@ -76,7 +116,7 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Topic Modeling</h2>
                     <h3 class="mb-0">Topics considering Stack Overflow data</h3>
-                    <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
+                    <p>LDA model plotted using the LDAvis method.</p>
                     <div id="so_topic_container" class="d-flex flex-column flex-md-row justify-content-between" style="width: 90%;">
                         <div id="ldavis_el127140123553488232566432981"></div>
                         <script type="text/javascript">
@@ -105,7 +145,7 @@
                         </script>
                     </div>
                     <h3 class="mb-0">Topics considering Github data</h3>
-                    <p>Bring to the table win-win survival strategies to ensure proactive domination. </p>
+                    <p>LDA model plotted using the LDAvis method.</p>
                     <div id="git_topic_container" class="d-flex flex-column flex-md-row justify-content-between" style="width: 90%;">
                         <div id="ldavis_el1231402936947005441324151833"></div>
                         <script type="text/javascript">
@@ -140,7 +180,7 @@
             <section class="resume-section" id="urls">
                 <div class="resume-section-content">
                     <h2 id="urlsLabelID" class="mb-0">URLs Related with COVID-19</h2>
-                    <div class="subheading mb-3">We classified them in: Application, Data repository, Code repository, and Other</div>
+                    <div class="subheading mb-3">They were classified as Application, Data repository, Code repository, and Other</div>
                     <div id="treeContainer"></div>
                 </div>
             </section>
@@ -148,7 +188,34 @@
             <!-- Contact-->
             <section class="resume-section" id="contact">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Contact</h2>
+                    <h2 class="mb-0">Contact</h2>
+                    <div class="subheading mb-3">You can contact us using one of the following emails.</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><a href="https://orcid.org/0000-0002-3067-3076" target="_blank"><img src="report/ORCIDiD_icon16x16.png"></a></span>
+                            Pedro Almir Oliveira: <a href="mailto:pedromartins@great.ufc.br">pedromartins@great.ufc.br</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><a href="https://orcid.org/0000-0002-1554-8445" target="_blank"><img src="report/ORCIDiD_icon16x16.png"></a></span>
+                            Pedro Santos Neto: <a href="mailto:pasn@ufpi.edu.br">pasn@ufpi.edu.br</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><a href="https://orcid.org/0000-0002-7128-7526" target="_blank"><img src="report/ORCIDiD_icon16x16.png"></a></span>
+                            Gleison Silva: <a href="mailto:gleison@infoway-pi.com.br">gleison@infoway-pi.com.br</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><a href="https://orcid.org/0000-0003-1308-172X" target="_blank"><img src="report/ORCIDiD_icon16x16.png"></a></span>
+                            Irvayne Ibiapina: <a href="mailto:irvaynematheus@gmail.com">irvaynematheus@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><a href="https://orcid.org/0000-0003-4198-8169" target="_blank"><img src="report/ORCIDiD_icon16x16.png"></a></span>
+                            Werney L. Lira: <a href="mailto:pasn@ufpi.edu.br">werney@ifpi.edu.br</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><a href="https://orcid.org/0000-0002-0186-2994" target="_blank"><img src="report/ORCIDiD_icon16x16.png"></a></span>
+                            Rossana M. C. Andrade: <a href="mailto:rossana@great.ufc.br">rossana@great.ufc.br</a>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <script type="module">
